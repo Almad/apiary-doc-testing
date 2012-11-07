@@ -2,14 +2,18 @@ HOST: http://www.google.com/
 
 --- Testing API ---
 
-GET /test
+POST /user/{id}
 < 201
 < Content-Type: application/json
 {
-    "status": "created"
+    "id": 2262625
 }
 
-GET /testiq
+GET /user/{id}
+> Accept: application/json
 < 200
-< Content-Type: application/xml
-<xml></xml>
+< Content-Type: application/json
+{
+    "id": 2262625
+}
+
