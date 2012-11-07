@@ -1,2 +1,15 @@
+HOST: http://www.google.com/
+
 --- Testing API ---
 
+GET /test
+< 201
+< Content-Type: application/json
+{
+    "status": "created"
+}
+
+GET /testiq
+< 200
+< Content-Type: application/xml
+<xml></xml>
