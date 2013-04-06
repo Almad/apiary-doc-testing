@@ -19,6 +19,16 @@ GET /blacklists
     "applications" : [{"name": "torrent", "WindowsRegister" : "0xAA"}]
 }
 
+GET /blacklist/{id}
+< 200
+< Content-Type: application/json
+{
+    "ips" : ["10.10.10.12", "213.4/16"],
+    "applications" : [{"name": "torrent", "WindowsRegister" : "0xAA"}]
+}
+
+
+
 Save new products in your shopping cart
 POST /shopping-cart
 > Content-Type: application/json
