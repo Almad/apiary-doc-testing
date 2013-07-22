@@ -1,14 +1,10 @@
 HOST: http://www.google.com/
 
---- kerio ---
+--- Github Sync test ---
 
 ---
 Welcome to the our sample API documentation. All comments can be written in (support [Markdown](http://daringfireball.net/projects/markdown/syntax) syntax)
 ---
-
---
-Kerio firewall
---
 
 Get applications blocked by firewall on given server
 GET /blacklists
@@ -18,27 +14,6 @@ GET /blacklists
     "ips" : ["10.10.10.12", "213.4/16"],
     "applications" : [{"name": "torrent", "WindowsRegister" : "0xAA"}]
 }
-
-GET /blacklist/{id}
-< 200
-< Content-Type: application/json
-{
-    "ips" : ["10.10.10.12"],
-    "applications" : [{"name": "torrent", "WindowsRegister" : "0xAA"}]
-}
-
-
-GET /blacklist/2
-< 200
-< Content-Type: application/json
-{
-    "ips" : [],
-    "applications" : []
-}
-
-GET /blacklist/4
-< 400
-
 
 Save new products in your shopping cart
 POST /shopping-cart
@@ -55,3 +30,9 @@ POST /payment
 { "cc": "12345678900", "cvc": "123", "expiry": "0112" }
 < 200
 { "receipt": "/payment/receipt/1" }
+
+
+
+GET /test
+< 200
+
